@@ -27,7 +27,7 @@ let package = Package(
             name: "MTLayeredBufferModule",
             dependencies: ["ARHeadsetUtil"]),
         .testTarget(
-            name: "MTLayeredBufferTests",
-            dependencies: ["MTLayeredBufferTests"]),
+            name: "MTLayeredBufferModuleTests",
+            dependencies: ["MTLayeredBufferModuleTests"]),
     ]
 )
