@@ -29,7 +29,7 @@ enum LiDARScanLayer: MTLBufferLayer {
 let device: MTLDevice = ...
 let numElements: Int = ...
 
-var buffer: MTLLayeredBuffer<LiDARScanLayer>
+var buffer: MTLLayeredBuffer<LiDARScanLayer> // options = .storageModePrivate by default
 buffer = device.makeLayeredBuffer(capacity: numElements, options: .storageModeShared)
 
 let pointCloud = buffer[.pointCloud].assumingMemoryBound(to: SIMD3<Float>.self)
