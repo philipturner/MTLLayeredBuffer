@@ -24,8 +24,8 @@ enum LiDARScanLayer: MTLBufferLayer {
     }
 }
 
-let numElements: Int = ...
 let device: MTLDevice = ...
+let numElements: Int = ...
 
 var buffer: MTLLayeredBuffer<LiDARScanLayer>
 buffer = device.makeLayeredBuffer(capacity: numElements, options: .storageModeShared)
