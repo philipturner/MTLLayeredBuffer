@@ -18,8 +18,10 @@ enum LiDARScanLayer: MTLBufferLayer {
     
     func getSize(capacity: Int) -> Int {
         switch self {
-        case .pointCloud: return capacity * MemoryLayout<SIMD3<Float>>.stride
-        case .pointIDs:   return capacity * MemoryLayout<UInt64>.stride
+        case .pointCloud:
+            return capacity * MemoryLayout<SIMD3<Float>>.stride
+        case .pointIDs:
+            return capacity * MemoryLayout<UInt64>.stride
         }
     }
 }
