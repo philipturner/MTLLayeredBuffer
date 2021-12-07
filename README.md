@@ -12,14 +12,14 @@ import MTLLayeredBufferModule
 
 enum LiDARScanLayer: MTLBufferLayer {
     case pointCloud
-    case pointIndices
+    case pointIDs
     
     static let bufferLabel = "LiDAR Scan Buffer"
     
     func getSize(capacity: Int) -> Int {
         switch self {
-        case .pointCloud:   return capacity * MemoryLayout<SIMD3<Float>>.stride
-        case .pointIndices: return capacity * MemoryLayout<UInt64>.stride
+        case .pointCloud: return capacity * MemoryLayout<SIMD3<Float>>.stride
+        case .pointIDs:   return capacity * MemoryLayout<UInt64>.stride
         }
     }
 }
@@ -31,10 +31,10 @@ var buffer: MTLLayeredBuffer<LiDARScanLayer>
 buffer = device.makeLayeredBuffer(capacity: numElements, options: .storageModeShared)
 
 let pointCloud = buffer[.pointCloud].assumingMemoryBound(to: SIMD3<Float>.self)
-let pointIndices = buffer[.pointIndices].assumingMemoryBound(to: UInt64.self)
+let pointIDs   = buffer[.pointIDs].assumingMemoryBound(to: UInt64.self)
 
 for i in 0..<numElements {
     pointCloud[i] = ...
-    pointIndices[i] = ...
+    pointIDs[i] = ...
 }
 ```
