@@ -4,7 +4,7 @@ A package encapsulating `MTLLayeredBuffer` from ARHeadsetKit. This type is not i
 
 > NOTE to self: switch the dependency from ARHeadsetUtil/temp to ARHeadsetUtil/main after validating that it works correctly
 
-## How to use
+## Example of usage
 
 ```swift
 import Metal
