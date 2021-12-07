@@ -18,7 +18,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(name: "ARHeadsetUtil", url: "https://github.com/philipturner/ARHeadsetUtil", branch: "temp"),
+        .package(name: "ARHeadsetUtil", url: "https://github.com/philipturner/ARHeadsetUtil", branch: "main"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
