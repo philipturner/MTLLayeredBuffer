@@ -8,7 +8,7 @@ A package encapsulating `MTLLayeredBuffer` from [ARHeadsetKit](https://github.co
 import Metal
 import MTLLayeredBufferModule
 
-enum LiDARScanLayer: MTLBufferLayer {
+enum LiDARScanLayer: UInt16, MTLBufferLayer {
     case pointCloud
     case pointIDs
     
