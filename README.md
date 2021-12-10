@@ -5,7 +5,6 @@ A package encapsulating `MTLLayeredBuffer` from [ARHeadsetKit](https://github.co
 ## Example of usage
 
 ```swift
-import Metal
 import MTLLayeredBufferModule
 
 enum LiDARScanLayer: UInt16, MTLBufferLayer {
